@@ -1,0 +1,30 @@
+{{>header}}
+{{>navigation}}
+<center>
+    {{#isVideo}}<img src="Gallery/whiteh.jpg" id="fon" style="width:100%">
+        <img src="Gallery/brendy.png" id="brendy" style="width:100%">{{/isVideo}}
+
+</center>
+<div class="row">
+
+    {{#products}}
+        <style>
+            class {
+    background: #333;}
+        </style>
+        <div class="card" style="width: 22rem; margin-left: 1rem ;margin-top:1rem ">
+
+            <img src="/images/{{image}}" class="card-img-top" style="height:300px">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{description}}</p>
+                <p class="card-text">Price{{price}}</p>
+                <a href="#" class="btn btn-primary" onclick="addToCard({{id}})">Add To Card</a>
+            </div>
+        </div>
+
+
+    {{/products}}
+</div>
+</body>
+</html>
